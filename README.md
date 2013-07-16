@@ -6,24 +6,30 @@ Proxy so you can send email via JavaScript through SendGrid.
 
 ### Development
 
-```
-$ touch .env
+```bash
+touch .env
 ```
 
 Set your settings in .env and then run:
 
-```
-$ node app.js
+```bash
+node app.js
 ```
 
 ### Production
 
-```
+```bash
 $ heroku create
 $ heroku addons:add sendgrid:starter
-$ heroku config:set TO=toemail FROM=fromemail SUBJECT=
+$ heroku config:set FROM=fromemail
 $ git push heroku master
-$ curl -X GET http://yoursubdomain.herokuapp.com/send?to=some@where.com&
 ```
 
 After you are done with that - you can call requests to that url to send an email.
+
+```bash
+curl -X POST http://yoursubdomain.herokuapp.com/send \
+-d "to=you@youremail.com" \
+-d "subject=Test" \
+-d "html=<h1>Hello, there</h1>"
+```

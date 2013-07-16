@@ -4,17 +4,18 @@ var send = {
       var to        = request.query.to;
       var subject   = request.query.subject;
       var html      = request.query.html;
-
-      SendGrid.send({
+      var email     = {
         to:       to,
         from:     FROM,
         subject:  subject,
         html:     html 
-      }, function(success, message) {
+      }
+
+      SendGrid.send(email, function(success, message) {
         if (!success) {
-          console.log(message);
+          request.reply({success: false, error: {message: message}});
         } else {
-          request.reply({ success: true, message: 'Send the email here.' });
+          request.reply({success: true, email: email});
         }
       });
     }

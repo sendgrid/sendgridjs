@@ -1,7 +1,7 @@
 var home = {
   index: {
     handler: function (request) {
-      request.reply({ success: true, message: 'You are using sendgridjs.' });
+      request.reply({success: true, message: 'You are using sendgridjs.' });
     }
   }
 };
