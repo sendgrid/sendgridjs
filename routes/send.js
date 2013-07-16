@@ -1,9 +1,10 @@
 var send = {
   index: {
     handler: function (request) {
-      var to        = request.query.to;
-      var subject   = request.query.subject;
-      var html      = request.query.html;
+      var payload   = request.payload;
+      var to        = payload.to;
+      var subject   = payload.subject;
+      var html      = payload.html;
       var email     = {
         to:       to,
         from:     FROM,
