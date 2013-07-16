@@ -23,7 +23,7 @@ var send = {
 };
 
 server.route({
-  method  : 'GET',
+  method  : 'POST',
   path    : '/send',
   config  : send.index
 });
