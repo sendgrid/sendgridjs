@@ -20,7 +20,7 @@ curl -X POST http://yoursubdomain.herokuapp.com/send \
 -d "html=<h1>Hello, there</h1>"
 ```
 
-### Using with JavaScript and HTML.
+#### Optional: Using with JavaScript and HTML.
 
 You might have a website with a form and you want to send emails from that form. After setting up this app, you can send emails by adding the following javascript to your html page.
 
