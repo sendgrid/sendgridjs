@@ -6,7 +6,7 @@
     "npm": "1.2.x"
   },
   "main": "app.js",
-  "description": "Catch webhooks and ping yourself from various services by going through SendGrid",
+  "description": "Send email from the client side through SendGrid.",
   "dependencies": {
     "dotenv": "0.0.2",
     "hapi": "1.6.2",
