@@ -6,6 +6,7 @@ Proxy so you can send email via JavaScript through SendGrid.
 
 ```bash
 $ git clone https://github.com/scottmotte/sendgridjs.git
+$ cd sendgridjs
 $ heroku create
 $ heroku addons:add sendgrid:starter
 $ heroku config:set FROM=fromemail
