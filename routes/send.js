@@ -4,7 +4,7 @@ function MatchError (message) {
 }
 
 var send = function (request) {
-  var emailParams = request.payload;
+  var email = request.payload;
 
   // Load All Rules
   if(fs.existsSync("./rules/all.js")){
@@ -27,18 +27,16 @@ var send = function (request) {
 
     // Validate Email Rules
     for (var field in rules) {
-        if (rules.hasOwnProperty(field)) {
-          if(!emailParams[field].match(rules[field])){
-            throw new MatchError("Could not match: " + field);
-          }
+      if (rules.hasOwnProperty(field)) {
+        if(!email[field].match(rules[field])){
+          throw new MatchError("Could not match: " + field);
         }
+      }
     }
 
-    email = new Email(emailParams);
-
-    sendgrid.send(email, function(success, message) {
-      if (!success) {
-        request.reply({success: false, error: {type: "SendGrid Error", message: message}});
+    sendgrid.send(email, function(err, json) {
+      if (err) {
+        request.reply({success: false, error: {type: "SendGrid Error", message: err.message}});
       } else {
         request.reply({success: true, email: email});
       }
