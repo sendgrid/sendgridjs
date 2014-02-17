@@ -47,6 +47,8 @@ $("form#id").submit(function() {
       alert(response.error.message);
     }
   });
+
+  return false;
 });
 ```
 
