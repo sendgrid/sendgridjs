@@ -2,6 +2,15 @@
 
 Proxy so you can send email via JavaScript through SendGrid.
 
+## Developing on Nitrous.IO
+
+Start working with sendgridjs on
+[Nitrous.IO](https://www.nitrous.io/?utm_source=github.com&utm_campaign=sendgridjs&utm_medium=hackonnitrous) in
+a matter of seconds:
+
+[![Hack scottmotte/sendgridjs on
+Nitrous.IO](https://d3o0mnbgv6k92a.cloudfront.net/assets/hack-l-v1-3cc067e71372f6045e1949af9d96095b.png)](https://www.nitrous.io/hack_button?source=embed&runtime=nodejs&repo=scottmotte%2Fsendgridjs&file_to_open=README.nitrous.md)
+
 ## Usage 
 
 ```bash
