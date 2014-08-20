@@ -7,8 +7,8 @@
     "javascript",
     "email"
   ],
-  "website": "https://github.com/sendgrid/sendgridjs",
-  "repository": "https://github.com/sendgrid/sendgridjs",
+  "website": "https://github.com/scottmotte/sendgridjs",
+  "repository": "https://github.com/scottmotte/sendgridjs",
   "logo": "https://raw.githubusercontent.com/scottmotte/sendgridjs/master/sendgridjs.jpg",
   "env": {
     "FROM": {
