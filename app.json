@@ -7,9 +7,9 @@
     "javascript",
     "email"
   ],
-  "website": "https://github.com/sendgrid/sendgridjs",
-  "repository": "https://github.com/sendgrid/sendgridjs",
-  "logo": "https://raw.githubusercontent.com/sendgrid/sendgridjs/master/sendgridjs.jpg",
+  "website": "https://github.com/scottmotte/sendgridjs",
+  "repository": "https://github.com/scottmotte/sendgridjs",
+  "logo": "https://raw.githubusercontent.com/scottmotte/sendgridjs/master/sendgridjs.jpg",
   "env": {
     "FROM": {
       "description": "This should be the 'from' email address your users see when receiving email from your application.",
