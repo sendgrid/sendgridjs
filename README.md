@@ -1,5 +1,7 @@
 # sendgridjs
 
+![](https://raw.githubusercontent.com/scottmotte/sendgridjs/master/sendgridjs.jpg)
+
 Proxy so you can send email via JavaScript through SendGrid.
 
 ## Developing on Nitrous.IO
