@@ -13,14 +13,9 @@ Nitrous.IO](https://d3o0mnbgv6k92a.cloudfront.net/assets/hack-l-v1-3cc067e71372f
 
 ## Usage 
 
-```bash
-$ git clone https://github.com/scottmotte/sendgridjs.git
-$ cd sendgridjs
-$ heroku create
-$ heroku addons:add sendgrid:starter
-$ heroku config:set FROM=fromemail
-$ git push heroku master
-```
+First, deploy to Heroku by clicking this button.
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 After you are done with that - you can call requests to that url to send an email.
 

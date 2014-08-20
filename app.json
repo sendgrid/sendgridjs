@@ -1,0 +1,22 @@
+{
+  "name": "sendgridjs",
+  "description": "Proxy so you can send email via JavaScript through SendGrid.",
+  "keywords": [
+    "sendgridjs",
+    "sendgrid",
+    "javascript",
+    "email"
+  ],
+  "website": "https://github.com/sendgrid/sendgridjs",
+  "repository": "https://github.com/sendgrid/sendgridjs",
+  "logo": "https://github.com/sendgrid/sendgridjs",
+  "env": {
+    "FROM": {
+      "description": "This should be the 'from' email address your users see when receiving email from your application."
+      "value": "you@youremail.com"
+    }
+  },
+  "addons": [
+    "sendgrid:starter"
+  ]
+}
