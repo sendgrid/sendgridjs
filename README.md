@@ -4,7 +4,7 @@
 
 Proxy so you can send email via JavaScript through SendGrid.
 
-## Usage 
+## Usage
 
 First, deploy to Heroku by clicking this button.
 
@@ -21,19 +21,19 @@ curl -X POST http://yoursubdomain.herokuapp.com/send \
 
 #### Optional: Using with JavaScript and HTML.
 
-You might have a website with a form and you want to send emails from that form. After setting up this app, you can send emails by adding the following javascript to your html page.
+You might have a website with a form and you want to send emails from that form to yourself. After setting up this app, you can send emails by adding the following javascript to your html page.
 
 First, make sure you add jQuery to your page. Then do the following on form submit.
 
 ```javascript
 $("form#id").submit(function() {
   var sendgridjs_url      = "http://yoursubdomain.herokuapp.com/send";
-  var sendgridjs_to       = $("input#to").val();
+  var sendgridjs_from       = $("input#from").val();
   var sendgridjs_subject  = $("input#subject").val();
   var sendgridjs_html     = "<p>html of email here as a string</p>";
 
   var email = {
-    to      : sendgridjs_to, 
+    from    : sendgridjs_to,
     subject : sendgridjs_subject,
     html    : sendgridjs_html
   }
@@ -69,5 +69,3 @@ a matter of seconds:
 
 [![Hack scottmotte/sendgridjs on
 Nitrous.IO](https://d3o0mnbgv6k92a.cloudfront.net/assets/hack-l-v1-3cc067e71372f6045e1949af9d96095b.png)](https://www.nitrous.io/hack_button?source=embed&runtime=nodejs&repo=scottmotte%2Fsendgridjs&file_to_open=README.nitrous.md)
-
-

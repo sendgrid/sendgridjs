@@ -2,14 +2,14 @@ var send = {
   index: {
     handler: function (request) {
       var payload   = request.payload;
-      var to        = payload.to;
+      var from      = payload.from;
       var subject   = payload.subject;
       var html      = payload.html;
       var email     = {
-        to:       to,
-        from:     FROM,
+        to:       TO,
+        from:     from,
         subject:  subject,
-        html:     html 
+        html:     html
       }
 
       SendGrid.send(email, function(success, message) {
