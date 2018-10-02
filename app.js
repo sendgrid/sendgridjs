@@ -3,7 +3,8 @@ dotenv.load();
 
 var e           = module.exports;
 e.ENV           = process.env.NODE_ENV || 'development';
-FROM            = process.env.FROM
+FROM            = process.env.FROM;
+TO              = process.env.TO;
 
 sendgrid_username   = process.env.SENDGRID_USERNAME;
 var sendgrid_password   = process.env.SENDGRID_PASSWORD;
@@ -16,5 +17,3 @@ var Hapi        = require('hapi');
 server          = new Hapi.Server(+port, '0.0.0.0', { cors: true });
 require('./routes');
 server.start();
-
-

@@ -6,7 +6,7 @@ Run the following commands in the terminal below:
 2. Run `cp .env-example .env`
 3. In the `.env` file, replace `SENDGRID_USERNAME` to your Sendgrid Username
 4. In the `.env` file, replace `SENDGRID_PASSWORD` to your Sendgrid Password
-5. In the `.env` file, replace `FROM` to your email address
+5. In the `.env` file, either replace `FROM` or `TO` with your email address. Delete the one that you want a user to be able to customize.
 6. Run `npm install`
 6. Run `node app.js`
 
