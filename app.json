@@ -11,8 +11,12 @@
   "repository": "https://github.com/sendgrid/sendgridjs",
   "logo": "https://raw.githubusercontent.com/sendgrid/sendgridjs/master/sendgridjs.jpg",
   "env": {
+    "FROM": {
+      "description": "This should be the 'from' email address your users see when receiving email from your application. **YOU** are sending this email.",
+      "value": "you@youremail.com"
+    },
     "TO": {
-      "description": "This should be the 'to' email address your users are sending messages to via your application.  YOU are receiving this email.",
+      "description": "This should be the 'to' email address your users are sending messages to via your application's Contact Form.  **YOU** are receiving this email.",
       "value": "you@youremail.com"
     }
   },

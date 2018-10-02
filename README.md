@@ -21,19 +21,45 @@ curl -X POST http://yoursubdomain.herokuapp.com/send \
 
 #### Optional: Using with JavaScript and HTML.
 
-You might have a website with a form and you want to send emails from that form to yourself. After setting up this app, you can send emails by adding the following javascript to your html page.
+You might have a website with a form and you want to send emails from that form. After setting up this app, you can send emails by adding the following javascript to your html page.
 
 First, make sure you add jQuery to your page. Then do the following on form submit.
 
 ```javascript
 $("form#id").submit(function() {
   var sendgridjs_url      = "http://yoursubdomain.herokuapp.com/send";
-  var sendgridjs_from       = $("input#from").val();
+  var sendgridjs_to     = $("input#to").val();
   var sendgridjs_subject  = $("input#subject").val();
   var sendgridjs_html     = "<p>html of email here as a string</p>";
 
   var email = {
-    from    : sendgridjs_to,
+    to      : sendgridjs_to,
+    subject : sendgridjs_subject,
+    html    : sendgridjs_html
+  }
+  $.post(sendgridjs_url, email, function(response) {
+    if (response.success) {
+      // redirect somewhere or something. up to you. the email was sent successfully.
+    } else {
+      alert(response.error.message);
+    }
+  });
+
+  return false;
+});
+```
+
+If your site has a "Contact Us" form to enable a customer to send you messages, you will want to use a similar set up to the above example. The only difference is that instead of sending an email to the user, you want it sent to you and have it sent from the user.
+
+```javascript
+$("form#id").submit(function() {
+  var sendgridjs_url      = "http://yoursubdomain.herokuapp.com/send";
+  var sendgridjs_from     = $("input#from").val();
+  var sendgridjs_subject  = $("input#subject").val();
+  var sendgridjs_html     = "<p>html of email here as a string</p>";
+
+  var email = {
+    from    : sendgridjs_from,
     subject : sendgridjs_subject,
     html    : sendgridjs_html
   }

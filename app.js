@@ -3,7 +3,8 @@ dotenv.load();
 
 var e           = module.exports;
 e.ENV           = process.env.NODE_ENV || 'development';
-TO            = process.env.TO
+FROM            = process.env.FROM;
+TO              = process.env.TO;
 
 sendgrid_username   = process.env.SENDGRID_USERNAME;
 var sendgrid_password   = process.env.SENDGRID_PASSWORD;

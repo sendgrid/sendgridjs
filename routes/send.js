@@ -2,11 +2,12 @@ var send = {
   index: {
     handler: function (request) {
       var payload   = request.payload;
-      var from      = payload.from;
+      var from      = FROM || payload.from;
+      var to        = TO || payload.to;
       var subject   = payload.subject;
       var html      = payload.html;
       var email     = {
-        to:       TO,
+        to:       to,
         from:     from,
         subject:  subject,
         html:     html
