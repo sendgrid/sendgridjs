@@ -28,7 +28,7 @@ First, make sure you add jQuery to your page. Then do the following on form subm
 ```javascript
 $("form#id").submit(function() {
   var sendgridjs_url      = "http://yoursubdomain.herokuapp.com/send";
-  var sendgridjs_to     = $("input#to").val();
+  var sendgridjs_to       = $("input#to").val();
   var sendgridjs_subject  = $("input#subject").val();
   var sendgridjs_html     = "<p>html of email here as a string</p>";
 
