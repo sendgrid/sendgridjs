@@ -12,3 +12,6 @@ Run the following commands in the terminal below:
 
 Click on the "Preview Menu" and then "Port 3000" to view your sendgridjs
 app!
+
+
+####The above steps could let you get set-up on NITROUS.IO
