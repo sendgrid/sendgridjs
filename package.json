@@ -11,7 +11,7 @@
     "dotenv": "0.0.2",
     "hapi": "1.6.2",
     "nconf": "0.6.7",
-    "request": "2.21.0",
+    "request": "2.88.2",
     "sendgrid": "0.2.7"
   }
 }
